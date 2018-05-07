@@ -1,4 +1,4 @@
-import {toCamelCase, toSnakeCase} from '~/utils/text'
+import {toCamelCase, toSnakeCase} from '@/utils/text'
 
 export function keysToCamelCase (object) {
   return mapKeys(object, toCamelCase)

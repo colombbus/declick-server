@@ -1,7 +1,7 @@
 import crypto from 'crypto'
-import {assertRightPassword} from '~/api/users/errors'
-import NotFoundException from '~/exceptions/NotFoundException'
-import {Authorization, User} from '~/models'
+import {assertRightPassword} from '@/api/users/errors'
+import NotFoundException from '@/exceptions/NotFoundException'
+import {Authorization, User} from '@/models'
 
 export async function logIn (context, next) {
   const logInData = context.request.body

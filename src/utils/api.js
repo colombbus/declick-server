@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-import {makePolicy} from '~/middlewares/policy'
-import {makeValidator} from '~/middlewares/validator'
-import {makeViewer} from '~/middlewares/viewer'
-import {parseConfig} from '~/utils/config'
+import {makePolicy} from '@/middlewares/policy'
+import {makeValidator} from '@/middlewares/validator'
+import {makeViewer} from '@/middlewares/viewer'
+import {parseConfig} from '@/utils/config'
 
 export function registerApi (router, dir, context) {
   if (Array.isArray(dir)) {

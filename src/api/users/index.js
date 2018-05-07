@@ -1,6 +1,6 @@
-import {User} from '~/models'
-import {getRequestRange} from '~/utils/context'
-import {generatePasswordHash} from '~/utils/encryption'
+import {User} from '@/models'
+import {getRequestRange} from '@/utils/context'
+import {generatePasswordHash} from '@/utils/encryption'
 import {assertRightPassword, assertUniqueLogin} from './errors'
 
 export async function resolve (id, context, next) {

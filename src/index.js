@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
-import router from '~/api'
-import authenticate from '~/middlewares/authenticate'
-import errorHandler from '~/middlewares/errorHandler'
+import router from '@/api'
+import authenticate from '@/middlewares/authenticate'
+import errorHandler from '@/middlewares/errorHandler'
 
 dotenv.config()
 

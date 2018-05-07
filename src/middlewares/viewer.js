@@ -1,4 +1,4 @@
-import {mapProps} from '~/utils/objects'
+import {mapProps} from '@/utils/objects'
 
 export function makeViewer (config, isList) {
   return async function (context, next) {

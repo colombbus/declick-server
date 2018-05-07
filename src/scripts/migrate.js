@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import ora from 'ora'
-import {loadSqlModule} from '~/utils/sql'
-import {__} from '~/utils/text'
+import {loadSqlModule} from '@/utils/sql'
+import {__} from '@/utils/text'
 
 const MIGRATIONS_FOLDER = path.join('src', 'migrations')
 const Migration = loadSqlModule(__dirname, 'Migration')

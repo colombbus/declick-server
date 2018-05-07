@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import {registerApi} from '~/utils/api'
+import {registerApi} from '@/utils/api'
 import * as context from './rules'
 
 const router = Router()

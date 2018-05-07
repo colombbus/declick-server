@@ -1,8 +1,8 @@
-import ConflictException from '~/exceptions/ConflictException'
-import ForbiddenException from '~/exceptions/ForbiddenException'
-import {User} from '~/models'
-import {testPassword} from '~/utils/encryption'
-import {__} from '~/utils/text'
+import ConflictException from '@/exceptions/ConflictException'
+import ForbiddenException from '@/exceptions/ForbiddenException'
+import {User} from '@/models'
+import {testPassword} from '@/utils/encryption'
+import {__} from '@/utils/text'
 
 export async function assertUniqueLogin (login) {
   if (await User.existsByLogin(login)) {

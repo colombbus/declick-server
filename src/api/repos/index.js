@@ -1,5 +1,5 @@
-import {Repository} from '~/models'
-import {getRequestRange} from '~/utils/context'
+import {Repository} from '@/models'
+import {getRequestRange} from '@/utils/context'
 
 export async function resolve (id, context, next) {
   context.target = await Repository.getById(id)

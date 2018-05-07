@@ -1,4 +1,4 @@
-import BaseException from '~/exceptions/BaseException'
+import BaseException from '@/exceptions/BaseException'
 
 export default class ForbiddenException extends BaseException {
   constructor (description) {

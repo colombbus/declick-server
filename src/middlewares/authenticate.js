@@ -1,6 +1,6 @@
-import BadRequestException from '~/exceptions/BadRequestException'
-import {User} from '~/models'
-import {__} from '~/utils/text'
+import BadRequestException from '@/exceptions/BadRequestException'
+import {User} from '@/models'
+import {__} from '@/utils/text'
 
 export default async function (context, next) {
   const token = getAuthToken(context)

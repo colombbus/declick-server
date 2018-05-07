@@ -1,8 +1,8 @@
-import BadRequestException from '~/exceptions/BadRequestException'
-import ValidationException from '~/exceptions/ValidationException'
-import {makePropError} from '~/utils/errors'
-import {mapProps} from '~/utils/objects'
-import {__} from '~/utils/text'
+import BadRequestException from '@/exceptions/BadRequestException'
+import ValidationException from '@/exceptions/ValidationException'
+import {makePropError} from '@/utils/errors'
+import {mapProps} from '@/utils/objects'
+import {__} from '@/utils/text'
 
 export function makeValidator (config) {
   return async (context, next) => {

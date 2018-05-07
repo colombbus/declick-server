@@ -1,9 +1,9 @@
-import BadRequestException from '~/exceptions/BadRequestException'
-import ConflictException from '~/exceptions/ConflictException'
-import ForbiddenException from '~/exceptions/ForbiddenException'
-import NotFoundException from '~/exceptions/NotFoundException'
-import UnauthorizedException from '~/exceptions/UnauthorizedException'
-import ValidationException from '~/exceptions/ValidationException'
+import BadRequestException from '@/exceptions/BadRequestException'
+import ConflictException from '@/exceptions/ConflictException'
+import ForbiddenException from '@/exceptions/ForbiddenException'
+import NotFoundException from '@/exceptions/NotFoundException'
+import UnauthorizedException from '@/exceptions/UnauthorizedException'
+import ValidationException from '@/exceptions/ValidationException'
 
 export default async function (context, next) {
   try {

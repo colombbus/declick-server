@@ -1,4 +1,4 @@
-import {Repository} from '~/models'
+import {Repository} from '@/models'
 
 export async function resolve (id, context, next) {
   context.target = await Repository.getById(id)

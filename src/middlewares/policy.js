@@ -1,8 +1,8 @@
-import ForbiddenException from '~/exceptions/ForbiddenException'
-import UnauthorizedException from '~/exceptions/UnauthorizedException'
-import {makePropError} from '~/utils/errors'
-import {mapProps} from '~/utils/objects'
-import {__} from '~/utils/text'
+import ForbiddenException from '@/exceptions/ForbiddenException'
+import UnauthorizedException from '@/exceptions/UnauthorizedException'
+import {makePropError} from '@/utils/errors'
+import {mapProps} from '@/utils/objects'
+import {__} from '@/utils/text'
 
 export function makePolicy (config) {
   return async (context, next) => {
