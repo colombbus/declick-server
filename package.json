@@ -18,7 +18,6 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-root-import": "^5.1.0",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^4.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -37,5 +36,27 @@
     "moment": "^2.21.0",
     "node-pg-module": "colombbus/node-pg-module#d617c52",
     "ora": "^2.0.0"
-  }
+  },
+  "babel": {
+    "plugins": [
+      ["babel-plugin-root-import", {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }]
+    ],
+    "presets": [
+      ["env", {
+        "targets": {
+          "node": "current"
+        }
+      }]
+    ]
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "eslintIgnore": [
+    "**/*.sql",
+    "**/*.yml"
+  ]
 }
