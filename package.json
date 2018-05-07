@@ -33,7 +33,7 @@
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.3.0",
     "moment": "^2.21.0",
-    "node-pg-module": "file:../node-pg-module",
+    "node-pg-module": "colombbus/node-pg-module#d617c52",
     "ora": "^2.0.0"
   }
 }
