@@ -1,0 +1,17 @@
+fields:
+  login: !type String
+  password: !type String
+
+requests:
+  logIn:
+    fields: [login, password]
+    access: !context all
+    output: auth
+  logOut:
+    access: !context all
+
+views:
+  auth:
+    token: !context all
+    owner: !context all
+    expireTime: !context all

@@ -1,0 +1,40 @@
+fields:
+  name:
+    type: !type String
+    minLength: 1
+    maxLength: 255
+  type:
+    type: !type String
+    values: ['application', 'challenge', 'component']
+  description:
+    type: !type String
+    maxLength: 1000
+  public:
+    type: !type Boolean
+  owner: !type Number
+
+requests:
+  create:
+    fields: [name, type?, description?, public?]
+    access: !context authenticated
+    output: repo
+  showByPage:
+    access: !context all
+    output: repo[]
+  show:
+    access: [!context admin, !context owner]
+    output: repo
+  update:
+    fields: [name?, type?, description?, public?]
+    access: [!context admin, !context owner]
+    output: repo
+  destroy:
+    access: [!context admin, !context owner]
+
+views:
+  repo:
+    id: !context all
+    name: !context all
+    description: !context all
+    type: !context all
+    public: !context all

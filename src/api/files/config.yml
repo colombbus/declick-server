@@ -1,0 +1,28 @@
+fields:
+  name:
+    type: !type String
+    minLength: 1
+    maxLength: 255
+  mediaType:
+    type: !type String
+    minLength: 1
+    maxLength: 255
+  version:
+    type: !type Number
+    min: 1
+
+requests:
+  show:
+    access: [!context admin, !context owner]
+    output: file
+  showContent:
+    access: [!context admin, !context owner]
+    output: binary
+
+views:
+  file:
+    id: [!context all]
+    name: [!context all]
+    mediaType: [!context all]
+    version: [!context all]
+    repo: [!context all]

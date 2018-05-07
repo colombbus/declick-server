@@ -1,0 +1,53 @@
+requests:
+  create:
+    route: POST /users
+    fields: [login, password, email?, role?]
+    access:
+      global: all
+      by-field:
+        role: admin
+    output: user
+  showByPage:
+    route: GET /users
+    access: all
+    output: user[]
+  show:
+    route: GET /users/:userId
+    access: all
+    output: user
+  update:
+    route: PATCH /users/:userId
+    fields: [email?, oldPassword?, password?, role?]
+    access:
+      global: [admin, self]
+      by-field:
+        role: admin
+    output: user
+  destroy:
+    route: DELETE /users/:userId
+    access: [admin, self]
+
+fields:
+  login:
+    type: String
+    minLength: 3
+    maxLength: 20
+    match: /^[a-z0-9]+(-[a-z0-9]+)*$/i
+  email:
+    type: String
+    maxLength: 254
+    match: /.+@.+/
+  password:
+    type: String
+    minLength: 6
+  oldPassword: String
+  role:
+    type: String
+    values: [user, admin]
+
+outputs:
+  user:
+    id: all
+    login: all
+    role: [admin, self]
+    email: [admin, self]
