@@ -2583,8 +2583,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-"node-pg-module@file:../node-pg-module":
+node-pg-module@colombbus/node-pg-module#d617c52:
   version "0.1.0"
+  resolved "https://codeload.github.com/colombbus/node-pg-module/tar.gz/d617c524cb098ce967e8a24239aa54948860d541"
   dependencies:
     dotenv "^5.0.1"
     pg "^7.4.1"

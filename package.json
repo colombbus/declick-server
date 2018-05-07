@@ -7,7 +7,9 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir lib",
+    "start": "node lib/index.js",
+    "serve": "nodemon src/index.js --exec babel-node",
     "create:migration": "babel-node src/scripts/create-migration",
     "migrate": "babel-node src/scripts/migrate",
     "lint": ".\\node_modules\\.bin\\eslint src/**"
