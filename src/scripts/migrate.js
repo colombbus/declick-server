@@ -1,11 +1,12 @@
 import fs from 'fs'
 import path from 'path'
+import loadPgModule from 'node-pg-module'
 import ora from 'ora'
-import {loadSqlModule} from '@/utils/sql'
+
 import {__} from '@/utils/text'
 
 const MIGRATIONS_FOLDER = path.join('src', 'migrations')
-const Migration = loadSqlModule(__dirname, 'Migration')
+const Migration = loadPgModule(__dirname, 'Migration.sql')
 
 /**
  * Usage:
@@ -118,7 +119,7 @@ async function listDoneMigrations () {
 }
 
 function loadMigrationModule (name) {
-  return loadSqlModule(MIGRATIONS_FOLDER, name)
+  return loadPgModule(MIGRATIONS_FOLDER, `${name}.sql`)
 }
 
 migrate()
