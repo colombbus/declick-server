@@ -6,10 +6,10 @@ CREATE TABLE files (
   version    INTEGER      NOT NULL
                           DEFAULT 1
                           CHECK (version >= 1),
-  repo       INTEGER      REFERENCES repos ON DELETE CASCADE
+  project    INTEGER      REFERENCES projects ON DELETE CASCADE
 );
-CREATE UNIQUE INDEX ON files (repo, name) WHERE repo IS NOT NULL;
-CREATE INDEX ON files (repo);
+CREATE UNIQUE INDEX ON files (project, name);
+CREATE INDEX ON files (project);
 
 -- @function down
 DROP TABLE files;

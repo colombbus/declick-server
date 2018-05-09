@@ -1,7 +1,6 @@
 -- @function up
 CREATE TABLE auths (
-  token       CHAR(32)  NOT NULL
-                        PRIMARY KEY,
+  token       CHAR(32)  NOT NULL PRIMARY KEY,
   owner       INTEGER   NOT NULL
                         REFERENCES users ON DELETE CASCADE,
   expire_time TIMESTAMP NOT NULL
