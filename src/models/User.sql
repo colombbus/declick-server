@@ -1,8 +1,8 @@
 -- @function create
 -- @params data
 -- @returns row
-INSERT INTO users (login, email, password_hash)
-VALUES ($data.login, $data.email, $data.passwordHash)
+INSERT INTO users (username, email, password_hash)
+VALUES ($data.username, $data.email, $data.passwordHash)
 RETURNING *;
 
 -- @function getById
@@ -12,12 +12,12 @@ SELECT *
   FROM users
  WHERE id = $id;
 
--- @function getByLogin
--- @params login
+-- @function getByUsername
+-- @params username
 -- @returns row
 SELECT *
   FROM users
- WHERE login = $login;
+ WHERE username = $username;
 
 -- @function getByToken
 -- @params token
@@ -38,12 +38,12 @@ SELECT *
 OFFSET $from
  LIMIT $count;
 
--- @function existsByLogin
--- @params login
+-- @function existsByUsername
+-- @params username
 -- @returns field
 SELECT COUNT(*) > 0
   FROM users
- WHERE login = $login;
+ WHERE username = $username;
 
 -- @function updateById
 -- @params id, data

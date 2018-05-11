@@ -3,9 +3,9 @@ CREATE TYPE project_type_enum
             AS ENUM('application', 'challenge');
 CREATE TABLE project (
   id          SERIAL            PRIMARY KEY,
-  name        VARCHAR(255)      NOT NULL,
+  name        VARCHAR(100)      NOT NULL,
   type        project_type_enum NOT NULL DEFAULT 'application',
-  description VARCHAR(1000)     NOT NULL DEFAULT '',
+  description TEXT              NOT NULL DEFAULT '',
   public      BOOLEAN           NOT NULL DEFAULT FALSE,
   owner       INTEGER           NOT NULL
                                 REFERENCES users ON DELETE CASCADE
