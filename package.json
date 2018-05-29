@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A web service used in the Declick project to centralize and interact with the internal and community's data.",
   "homepage": "https://github.com/colombbus/declick-server",
-  "author": "Guillaume Macquat <yovar@rougain.com>",
+  "author": "Colombbus <contact@colombbus.org>",
   "license": "GPL-3.0",
   "private": true,
   "scripts": {

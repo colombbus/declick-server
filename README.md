@@ -13,7 +13,7 @@ A REST web service used in the [Declick project](http://declick.net/) to central
 * Open a terminal and move to the directory where you want to install declick-server.
 * Run:
 ```
-git clone https://github.com/yovar/declick-server
+git clone https://github.com/colombbus/declick-server
 yarn install
 ```
 
